@@ -14,7 +14,7 @@ var ListeActionVue = (function()
             var li="";
             for(var numeroAction in listeActionDonnee)
             {
-                li += '<a class="list-group-item list-group-item-action" href="#action/' + numeroAction + '">' + listeActionDonnee[numeroAction].nom + "</a>";
+                li += '<a class="list-group-item list-group-item-action" href="#action/' + numeroAction + '">' + listeActionDonnee[numeroAction].phrase + "</a>";
             }
             listeAction.innerHTML = li;
         }

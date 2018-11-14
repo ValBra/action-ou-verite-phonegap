@@ -3,7 +3,7 @@
 	
 	var lancer = function(){
         this.actionDAO = new ActionDAO();
-        this.veriteDAO = new VeriteDAO();
+    	this.veriteDAO = new VeriteDAO();
 		window.addEventListener("hashchange",naviguer);
 		naviguer();
 	}
@@ -12,12 +12,20 @@
 		var hash = window.location.hash;
 		if(!hash){
 			this.listeAction = this.actionDAO.lister();
-			this.listeVerite = this.veriteDAO.lister();
 			var listeActionVue = new ListeActionVue(instance.listeAction);
-			var listeVeriteVue = new ListeVeriteVue(instance.listeVerite);
 			listeActionVue.afficher();
-			listeVeriteVue.afficher();
 		}
+		else if(hash.match(/^#ajouter-action/))
+        {
+            var ajouterActionVue = new AjouterActionVue(actionEnregistrerAction);
+            ajouterActionVue.afficher();
+        }
+		/*else if(hash.match(/^#liste-action/))
+        {
+            this.listeAction = this.actionDAO.lister();
+			var listeActionVue = new ListeActionVue(instance.listeAction);
+			listeActionVue.afficher();
+		}*/
 	}
 	
 	var actionEnregistrerAction = function(action){

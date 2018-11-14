@@ -38,6 +38,17 @@
 					<h1 class="h1">Liste des actions</h1>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<a class="btn btn-primary" role="button" href="#ajouter-action">Ajouter une action</a>
+					<br/><br/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="list-group" id="liste-action"></div>
+				</div>
+			</div>
         </script>
         <!-- Liste des verites -->
 		<script type="plain/text" id="page-liste-verite">
@@ -80,6 +91,36 @@
 					<h1 class="h1">Ajouter une action</h1>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-sm-12">
+
+					<form id="formulaire-ajouter">
+						<div class="form-group">
+							<label for="phrase">Phrase</label>
+							<input class="form-control" type="text" name="phrase" id="phrase"/>
+						</div>
+						<div class="form-group">
+							<label for="type">Type</label>
+							<input class="form-control" type="text" name="type" id="type"/>
+						</div>
+						<div class="form-group">
+							<label for="theme">Theme</label>
+							<input class="form-control" type="text" name="theme" id="theme"/>
+						</div>
+						<div class="form-group">
+							<label for="difficulte">Difficulte</label>
+							<input class="form-control" type="text" name="difficulte" id="difficulte"/>
+						</div>
+						<div class="form-group">
+							<label for="createur">Createur</label>
+							<input class="form-control" type="text" name="createur" id="createur"/>
+						</div>
+						<input class="btn btn-primary" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+						<a class="btn btn-primary" role="button" href="#">Annuler et retour</a>
+					</form>
+				
+				</div>
+			</div>
         </script>
         <!-- Ajouter une verite -->
 		<script type="plain/text" id="page-ajouter-verite">
@@ -114,7 +155,8 @@
 	<script src="js/donnee/ActionDAO.js"></script>
 	<script src="js/donnee/VeriteDAO.js"></script>
 	<script src="js/vue/action/ListeActionVue.js"></script>
-	<script src="js/vue/vertite/ListeVeriteVue.js"></script>
+	<script src="js/vue/verite/ListeVeriteVue.js"></script>
+	<script src="js/vue/action/AjouterActionVue.js"></script>
 	<script src="js/application.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
