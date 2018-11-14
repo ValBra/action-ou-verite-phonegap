@@ -11,9 +11,8 @@
 	var naviguer = function(){
 		var hash = window.location.hash;
 		if(!hash){
-			this.listeAction = this.actionDAO.lister();
-			var listeActionVue = new ListeActionVue(instance.listeAction);
-			listeActionVue.afficher();
+			var accueilVue = new AccueilVue();
+			accueilVue.afficher();
 		}
 		else if(hash.match(/^#liste-action/))
         {
@@ -32,6 +31,10 @@
 			var listeVeriteVue = new ListeVeriteVue(instance.listeVerite);
 			listeVeriteVue.afficher();
 		}
+		else
+        {
+            alert("Error : Page invalide");
+        }
 	}
 	
 	var actionEnregistrerAction = function(action){
