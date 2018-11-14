@@ -23,8 +23,12 @@ var VeriteDAO = function()
         {
             for(position in listeVerite)
             {
-                var verite = new Verite(
-                    listeVerite[position].nom,
+                var verite = new ActionVerite(
+                    listeVerite[position].phrase,
+                    listeVerite[position].type,
+                    listeVerite[position].theme,
+                    listeVerite[position].difficulte,
+                    listeVerite[position].createur,
                     listeVerite[position].id
                 );
                 listeVerite[position] = verite;

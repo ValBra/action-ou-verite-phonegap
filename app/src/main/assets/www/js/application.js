@@ -11,21 +11,37 @@
 	var naviguer = function(){
 		var hash = window.location.hash;
 		if(!hash){
-			this.listeAction = this.actionDAO.lister();
+			var accueilVue = new AccueilVue();
+			accueilVue.afficher();
+		}
+		else if(hash.match(/^#liste-action/))
+        {
+            this.listeAction = this.actionDAO.lister();
 			var listeActionVue = new ListeActionVue(instance.listeAction);
 			listeActionVue.afficher();
 		}
+		else if(hash.match(/^#action\/([0-9]+)/))
+        {
+            var navigation = hash.match(/^#action\/([0-9]+)/);
+            var idAction = navigation[1];
+            var actionVue = new ActionVue(instance.listeAction[idAction]);
+            actionVue.afficher();
+        }
 		else if(hash.match(/^#ajouter-action/))
         {
             var ajouterActionVue = new AjouterActionVue(actionEnregistrerAction);
             ajouterActionVue.afficher();
         }
-		/*else if(hash.match(/^#liste-action/))
+		else if(hash.match(/^#liste-verite/))
         {
-            this.listeAction = this.actionDAO.lister();
-			var listeActionVue = new ListeActionVue(instance.listeAction);
-			listeActionVue.afficher();
-		}*/
+            this.listeVerite = this.veriteDAO.lister();
+			var listeVeriteVue = new ListeVeriteVue(instance.listeVerite);
+			listeVeriteVue.afficher();
+		}
+		else
+        {
+            alert("Error : Page invalide");
+        }
 	}
 	
 	var actionEnregistrerAction = function(action){

@@ -32,56 +32,26 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- Liste des actions -->
-		<script type="plain/text" id="page-liste-action">
+		<!-- Page d'accueil -->
+		<script type="plain/text" id="page-accueil">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1 class="h1">Liste des actions</h1>
+					<h1 class="h1">Action OU Vérité ??</h1>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
-					<a class="btn btn-primary" role="button" href="#ajouter-action">Ajouter une action</a>
-					<br/><br/>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="list-group" id="liste-action"></div>
-				</div>
-			</div>
-        </script>
-        <!-- Liste des verites -->
-		<script type="plain/text" id="page-liste-verite">
-			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="h1">Liste des verites</h1>
+					<a class="btn btn-primary" role="button" href="#liste-action">Liste des actions</a>
+					<a class="btn btn-primary" role="button" href="#liste-verite">Liste des vérités</a>				
 				</div>
 			</div>
 		</script>
+
 		<!-- Liste des joueurs -->
 		<script type="plain/text" id="page-liste-joueur">
 			<div class="row">
 				<div class="col-sm-12">
 					<h1 class="h1">Liste des joueurs</h1>
-				</div>
-			</div>
-        </script>
-
-		<!-- Detail de la action -->
-		<script type="plain/text" id="page-action">
-			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="h1" id="action-nom"></h1>
-				</div>
-			</div>
-        </script>
-        <!-- Detail de la verite -->
-		<script type="plain/text" id="page-verite">
-			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="h1" id="verite-nom"></h1>
 				</div>
 			</div>
 		</script>
@@ -93,7 +63,61 @@
 				</div>
 			</div>
 		</script>
-
+		
+		<!-- Liste des actions -->
+		<script type="plain/text" id="page-liste-action">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1">Liste des actions</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<a class="btn btn-primary" role="button" href="#ajouter-action">Ajouter une action</a>
+					<a class="btn btn-primary" role="button" href="#">Retour</a>
+					<br/><br/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="list-group" id="liste-action"></div>
+				</div>
+			</div>
+		</script>
+		<!-- Detail de la action -->
+		<script type="plain/text" id="page-action">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1" id="action-type"></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<p id="action-phrase"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<p id="action-theme"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<p id="action-difficulte"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<p id="action-createur"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<a class="btn btn-primary" role="button" id="lien-modifier-action">Modifier</a>
+					<a class="btn btn-primary" role="button" href="#liste-action">Retour</a>
+				</div>
+			</div>
+		</script>
 		<!-- Ajouter une action -->
 		<script type="plain/text" id="page-ajouter-action">
 			<div class="row">
@@ -131,16 +155,7 @@
 
 				</div>
 			</div>
-        </script>
-        <!-- Ajouter une verite -->
-		<script type="plain/text" id="page-ajouter-verite">
-			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="h1">Ajouter une verite</h1>
-				</div>
-			</div>
 		</script>
-
 		<!-- Modifier une action-->
 		<script type="plain/text" id="page-modifier-action">
 			<div class="row">
@@ -149,7 +164,44 @@
 				</div>
 			</div>
         </script>
-        <!-- Modifier une verite-->
+		
+        <!-- Liste des verites -->
+		<script type="plain/text" id="page-liste-verite">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1">Liste des verites</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<a class="btn btn-primary" role="button" href="#ajouter-verite">Ajouter une verité</a>
+					<a class="btn btn-primary" role="button" href="#">Retour</a>
+					<br/><br/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="list-group" id="liste-verite"></div>
+				</div>
+			</div>
+		</script>
+        <!-- Detail de la verite -->
+		<script type="plain/text" id="page-verite">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1" id="verite-nom"></h1>
+				</div>
+			</div>
+		</script>
+		<!-- Ajouter une verite -->
+		<script type="plain/text" id="page-ajouter-verite">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1">Ajouter une verite</h1>
+				</div>
+			</div>
+		</script>
+		<!-- Modifier une verite-->
 		<script type="plain/text" id="page-modifier-verite">
 			<div class="row">
 				<div class="col-sm-12">
@@ -164,9 +216,14 @@
 	<script src="js/modele/ActionVerite.js"></script>
 	<script src="js/donnee/ActionDAO.js"></script>
 	<script src="js/donnee/VeriteDAO.js"></script>
+	<script src="js/vue/AccueilVue.js"></script>
+
 	<script src="js/vue/action/ListeActionVue.js"></script>
-	<script src="js/vue/verite/ListeVeriteVue.js"></script>
 	<script src="js/vue/action/AjouterActionVue.js"></script>
+	<script src="js/vue/action/ActionVue.js"></script>
+
+	<script src="js/vue/verite/ListeVeriteVue.js"></script>
+
 	<script src="js/application.js"></script>
 
 
