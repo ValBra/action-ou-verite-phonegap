@@ -2,7 +2,8 @@
 	var instance = this;
 	
 	var lancer = function(){
-		this.actionOuVeriteDAO = new actionOuVeriteDAO();
+        this.actionDAO = new ActionDAO();
+        this.veriteDAO = new VeriteDAO();
 		window.addEventListener("hashchange",naviguer);
 		naviguer();
 	}
