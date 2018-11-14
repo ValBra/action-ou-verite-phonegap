@@ -20,6 +20,13 @@
 			var listeActionVue = new ListeActionVue(instance.listeAction);
 			listeActionVue.afficher();
 		}
+		else if(hash.match(/^#action\/([0-9]+)/))
+        {
+            var navigation = hash.match(/^#action\/([0-9]+)/);
+            var idAction = navigation[1];
+            var actionVue = new ActionVue(instance.listeAction[idAction]);
+            actionVue.afficher();
+        }
 		else if(hash.match(/^#ajouter-action/))
         {
             var ajouterActionVue = new AjouterActionVue(actionEnregistrerAction);
