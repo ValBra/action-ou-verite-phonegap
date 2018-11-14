@@ -8,7 +8,7 @@ var AjouterActionVue = (function(){
             console.log("vue/AjouterActionVue : afficher()");
             document.getElementsByTagName("body")[0].innerHTML = pageAjouterAction;
 
-            var formulaireAjouter = document.getElementById("formulaire-ajouter");
+            var formulaireAjouter = document.getElementById("formulaire-ajouter-action");
             formulaireAjouter.addEventListener("submit",enregistrerAction);
         }
 

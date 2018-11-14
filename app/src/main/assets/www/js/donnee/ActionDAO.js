@@ -49,6 +49,15 @@ var ActionDAO = function()
         //console.log(JSON.stringify(listeAction));
 
     }
+
+    this.modifier = function(action)
+    {
+        console.log("donnee/ActionDAO : modifier(action)");
+        
+        listeAction[action.id] = action;
+        localStorage['action'] = JSON.stringify(listeAction);
+        //console.log(JSON.stringify(listeAction));
+    }
     
     initialiser();
 }

@@ -31,6 +31,13 @@
         {
             var ajouterActionVue = new AjouterActionVue(actionEnregistrerAction);
             ajouterActionVue.afficher();
+		}
+		else if(hash.match(/^#modifier-action\/([0-9]+)/))
+        {
+            var navigation = hash.match(/^#modifier-action\/([0-9]+)/);
+            var idAction = navigation[1];
+            var modifierActionVue = new ModifierActionVue(actionEnregistrerModifAction);
+            modifierActionVue.afficher(instance.listeAction[idAction]);
         }
 		else if(hash.match(/^#liste-verite/))
         {
@@ -49,7 +56,7 @@
 		naviguerAccueil();
 	}
 	
-	var actionModifierAction = function(action){
+	var actionEnregistrerModifAction = function(action){
 		this.actionDAO.modifier(action);
 		naviguerAccueil();
 	}
