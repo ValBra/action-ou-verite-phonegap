@@ -3,7 +3,6 @@
 	
 	var lancer = function(){
         this.actionVeriteDAO = new ActionVeriteDAO();
-    	this.veriteDAO = new VeriteDAO();
 		window.addEventListener("hashchange",naviguer);
 		naviguer();
 	}
@@ -52,16 +51,6 @@
 	
 	var actionEnregistrerModifActionVerite = function(actionVerite){
 		this.actionVeriteDAO.modifier(actionVerite);
-		naviguerAccueil();
-	}
-	
-	var actionEnregistrerVerite = function(verite){
-		this.veriteDAO.ajouter(verite);
-		naviguerAccueil();
-	}
-	
-	var actionModifierVerite = function(Verite){
-		this.veriteDAO.modifier(Verite);
 		naviguerAccueil();
 	}
 	
