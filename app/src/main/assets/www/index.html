@@ -42,7 +42,8 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<a class="btn btn-primary" role="button" href="#liste-action">Liste des actions</a>
-					<a class="btn btn-primary" role="button" href="#liste-verite">Liste des vérités</a>				
+					<a class="btn btn-primary" role="button" href="#liste-verite">Liste des vérités</a>
+					<a class="btn btn-primary" role="button" href="#liste-actionVerite">Liste des actions verite</a>
 				</div>
 			</div>
 		</script>
@@ -223,6 +224,167 @@
 
 				</div>
 			</div>
+		</script>
+		
+		<!-- Liste des actions -->
+		<script type="plain/text" id="page-liste-actionVerite">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1">Liste des actions</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<a class="btn btn-primary" role="button" href="#ajouter-actionVerite">Ajouter une action</a>
+					<a class="btn btn-primary" role="button" href="#">Retour</a>
+					<br/><br/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="list-group" id="liste-actionVerite"></div>
+				</div>
+			</div>
+		</script>
+		<!-- Detail de la actionVerite -->
+		<script type="plain/text" id="page-actionVerite">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1" id="actionVerite-type"></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<p id="actionVerite-phrase"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<p id="actionVerite-theme"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<p id="actionVerite-difficulte"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<p id="actionVerite-createur"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<a class="btn btn-primary" role="button" id="lien-modifier-actionVerite">Modifier</a>
+					<a class="btn btn-primary" role="button" href="#liste-actionVerite">Retour</a>
+				</div>
+			</div>
+		</script>
+		<!-- Ajouter une actionVerite -->
+		<script type="plain/text" id="page-ajouter-actionVerite">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1">Ajouter une actionVerite</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+
+					<form id="formulaire-ajouter-actionVerite">
+						<div class="form-group">
+							<label for="phrase">Phrase</label>
+							<input class="form-control" type="text" name="phrase" id="phrase"/>
+						</div>
+						<div class="form-group">
+							<label for="type">Type</label>
+							<select class="custom-select" id="type">
+								<option selected>Choix...</option>
+								<option value="action">Action</option>
+								<option value="verite">Vérité</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="theme">Theme</label>
+							<select class="custom-select" id="theme">
+								<option selected>Choix...</option>
+								<option value="enfants">Enfants</option>
+								<option value="ados">Ados</option>
+								<option value="classique">Classique</option>
+								<option value="soiree">Soirée</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="difficulte">Difficulte</label>
+							<select class="custom-select" id="difficulte">
+								<option selected>Choix...</option>
+								<option value="facile">Facile</option>
+								<option value="normal">Normal</option>
+								<option value="difficile">Difficile</option>
+								<option value="hard">Hard</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="createur">Createur</label>
+							<input class="form-control" type="text" name="createur" id="createur"/>
+						</div>
+						<input class="btn btn-primary" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+						<a class="btn btn-primary" role="button" href="#">Annuler et retour</a>
+					</form>
+
+				</div>
+			</div>
+		</script>
+		<!-- Modifier une actionVerite-->
+		<script type="plain/text" id="page-modifier-actionVerite">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1">Modifier une action</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+
+					<form id="formulaire-modifier-actionVerite">
+						<input type="hidden" id="id" name="id">
+						<div class="form-group">
+							<label for="phrase">Phrase</label>
+							<input class="form-control" type="text" name="phrase" id="phrase"/>
+						</div>
+						<div class="form-group">
+							<label for="type">Type</label>
+							<select class="custom-select" id="type">
+								<option value="action">Action</option>
+								<option value="verite">Vérité</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="theme">Theme</label>
+							<select class="custom-select" id="theme">
+								<option value="enfants">Enfants</option>
+								<option value="ados">Ados</option>
+								<option value="classique">Classique</option>
+								<option value="soiree">Soirée</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="difficulte">Difficulte</label>
+							<select class="custom-select" id="difficulte">
+								<option value="facile">Facile</option>
+								<option value="normal">Normal</option>
+								<option value="difficile">Difficile</option>
+								<option value="hard">Hard</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="createur">Createur</label>
+							<input class="form-control" type="text" name="createur" id="createur"/>
+						</div>
+						<input class="btn btn-primary" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+						<a class="btn btn-primary" role="button" href="#">Annuler et retour</a>
+					</form>
+
+				</div>
+			</div>
         </script>
 		
         <!-- Liste des verites -->
@@ -276,12 +438,18 @@
 	<script src="js/modele/ActionVerite.js"></script>
 	<script src="js/donnee/ActionDAO.js"></script>
 	<script src="js/donnee/VeriteDAO.js"></script>
+	<script src="js/donnee/ActionVeriteDAO.js"></script>
 	<script src="js/vue/AccueilVue.js"></script>
 
 	<script src="js/vue/action/ListeActionVue.js"></script>
 	<script src="js/vue/action/AjouterActionVue.js"></script>
 	<script src="js/vue/action/ActionVue.js"></script>
 	<script src="js/vue/action/ModifierActionVue.js"></script>
+
+	<script src="js/vue/actionVerite/ListeActionVeriteVue.js"></script>
+	<script src="js/vue/actionVerite/ActionVeriteVue.js"></script>
+	<script src="js/vue/actionVerite/AjouterActionVeriteVue.js"></script>
+	<script src="js/vue/actionVerite/ModifierActionVeriteVue.js"></script>
 
 	<script src="js/vue/verite/ListeVeriteVue.js"></script>
 

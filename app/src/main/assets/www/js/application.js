@@ -2,7 +2,7 @@
 	var instance = this;
 	
 	var lancer = function(){
-        this.actionDAO = new ActionDAO();
+        this.actionVeriteDAO = new ActionVeriteDAO();
     	this.veriteDAO = new VeriteDAO();
 		window.addEventListener("hashchange",naviguer);
 		naviguer();
@@ -14,50 +14,44 @@
 			var accueilVue = new AccueilVue();
 			accueilVue.afficher();
 		}
-		else if(hash.match(/^#liste-action/))
+		else if(hash.match(/^#liste-actionVerite/))
         {
-            this.listeAction = this.actionDAO.lister();
-			var listeActionVue = new ListeActionVue(instance.listeAction);
-			listeActionVue.afficher();
+            this.listeActionVerite = this.actionVeriteDAO.lister();
+			var listeActionVeriteVue = new ListeActionVeriteVue(instance.listeActionVerite);
+			listeActionVeriteVue.afficher();
 		}
-		else if(hash.match(/^#action\/([0-9]+)/))
+		else if(hash.match(/^#actionVerite\/([0-9]+)/))
         {
-            var navigation = hash.match(/^#action\/([0-9]+)/);
-            var idAction = navigation[1];
-            var actionVue = new ActionVue(instance.listeAction[idAction]);
-            actionVue.afficher();
+            var navigation = hash.match(/^#actionVerite\/([0-9]+)/);
+            var idActionVerite = navigation[1];
+            var actionVeriteVue = new ActionVeriteVue(instance.listeActionVerite[idActionVerite]);
+            actionVeriteVue.afficher();
         }
-		else if(hash.match(/^#ajouter-action/))
+		else if(hash.match(/^#ajouter-actionVerite/))
         {
-            var ajouterActionVue = new AjouterActionVue(actionEnregistrerAction);
-            ajouterActionVue.afficher();
+            var ajouterActionVeriteVue = new AjouterActionVeriteVue(actionEnregistrerActionVerite);
+            ajouterActionVeriteVue.afficher();
 		}
-		else if(hash.match(/^#modifier-action\/([0-9]+)/))
+		else if(hash.match(/^#modifier-actionVerite\/([0-9]+)/))
         {
-            var navigation = hash.match(/^#modifier-action\/([0-9]+)/);
-            var idAction = navigation[1];
-            var modifierActionVue = new ModifierActionVue(actionEnregistrerModifAction);
-            modifierActionVue.afficher(instance.listeAction[idAction]);
+            var navigation = hash.match(/^#modifier-actionVerite\/([0-9]+)/);
+            var idActionVerite = navigation[1];
+            var modifierActionVeriteVue = new ModifierActionVeriteVue(actionEnregistrerModifActionVerite);
+            modifierActionVeriteVue.afficher(instance.listeActionVerite[idActionVerite]);
         }
-		else if(hash.match(/^#liste-verite/))
-        {
-            this.listeVerite = this.veriteDAO.lister();
-			var listeVeriteVue = new ListeVeriteVue(instance.listeVerite);
-			listeVeriteVue.afficher();
-		}
 		else
         {
             alert("Error : Page invalide");
         }
 	}
 	
-	var actionEnregistrerAction = function(action){
-		this.actionDAO.ajouter(action);
+	var actionEnregistrerActionVerite = function(actionVerite){
+		this.actionVeriteDAO.ajouter(actionVerite);
 		naviguerAccueil();
 	}
 	
-	var actionEnregistrerModifAction = function(action){
-		this.actionDAO.modifier(action);
+	var actionEnregistrerModifActionVerite = function(actionVerite){
+		this.actionVeriteDAO.modifier(actionVerite);
 		naviguerAccueil();
 	}
 	
