@@ -3,7 +3,7 @@ var JoueurDAO = function()
     var listeJoueur;
     var initialiser = function()
     {
-        if(!listeAction) listeJoueur = [];
+        if(!listeJoueur) listeJoueur = [];
     }
 
     this.chercherAvecId = function(id)
@@ -15,9 +15,9 @@ var JoueurDAO = function()
     {
         console.log("donnee/JoueurDAO : lister()");
 
-        if(localStorage['action'])
+        if(localStorage['joueur'])
         {
-            listeJoueur = JSON.parse(localStorage['action']);
+            listeJoueur = JSON.parse(localStorage['joueur']);
         }
         else
         {

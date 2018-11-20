@@ -3,6 +3,7 @@
 	
 	var lancer = function(){
         this.actionVeriteDAO = new ActionVeriteDAO();
+        this.joueurDAO = new JoueurDAO();
 		window.addEventListener("hashchange",naviguer);
 		naviguer();
 	}
@@ -18,6 +19,12 @@
             this.listeActionVerite = this.actionVeriteDAO.lister();
 			var listeActionVeriteVue = new ListeActionVeriteVue(instance.listeActionVerite);
 			listeActionVeriteVue.afficher();
+		}
+		else if(hash.match(/^#selectionJoueur/))
+		{
+		    this.listeJoueur = this.joueurDAO.lister();
+		    var listeJoueurVue = new ListeJoueurVue(instance.listeJoueur);
+		    listeJoueurVue.afficher();
 		}
 		else if(hash.match(/^#actionVerite\/([0-9]+)/))
         {
