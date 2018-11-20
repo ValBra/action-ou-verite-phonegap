@@ -24,8 +24,14 @@ a {
     left: 0;
 }
 
-form {
+.bouton-menu {
 	width: 20%;
+	margin: auto;
+	text-align: center;
+}
+
+.form-ajouter {
+  width: 35%;
 	margin: auto;
 	text-align: center;
 }
