@@ -1,6 +1,18 @@
 (function(){
 	var instance = this;
 	
+	/*var btn = document.getElementById('btnAV');
+	
+	btn.onclick = function(){
+		var CSStransforms = anime({
+		  targets: '#CSStransforms .el',
+		  translateX: 250,
+		  scale: 2,
+		  rotate: '1turn'
+		});
+		console.log("clic sur btn");
+	}*/
+	
 	var lancer = function(){
         this.actionVeriteDAO = new ActionVeriteDAO();
         this.joueurDAO = new JoueurDAO();
