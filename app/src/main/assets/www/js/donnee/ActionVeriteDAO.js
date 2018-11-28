@@ -58,7 +58,7 @@ var ActionVeriteDAO = function()
 
     this.modifier = function(actionVerite)
     {
-        console.log("donnee/ActionDAO : modifier(actionVerite)");
+        console.log("donnee/ActionVeriteDAO : modifier(actionVerite)");
         
         listeActionVerite[actionVerite.id] = actionVerite;
         localStorage['actionVerite'] = JSON.stringify(listeActionVerite);

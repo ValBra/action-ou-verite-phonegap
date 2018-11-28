@@ -44,6 +44,13 @@
             var ajouterJoueurVue = new AjouterJoueurVue(actionEnregistrerJoueur);
             ajouterJoueurVue.afficher();
         }
+        else if(hash.match(/^#modifier-joueur\/([0-9]+)/))
+        {
+            var navigation = hash.match(/^#modifier-joueur\/([0-9]+)/);
+            var idJoueur = navigation[1];
+            var modifierJoueurVue = new ModifierJoueurVue(actionEnregistrerModifJoueur);
+            modifierJoueurVue.afficher(instance.listeJoueur[idJoueur]);
+        }
 		else if(hash.match(/^#liste-actionVerite/))
         {
             this.listeActionVerite = this.actionVeriteDAO.lister();

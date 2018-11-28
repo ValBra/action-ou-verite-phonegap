@@ -36,17 +36,26 @@ var JoueurDAO = function()
     }
 
     this.ajouter = function(joueur)
-        {
-            console.log("donnee/JoueurDAO : ajouter(actionVerite)");
-            // il faut ici attribuer un id au actionVerite
-            if(listeJoueur.length > 0) joueur.id = listeJoueur[listeJoueur.length-1].id + 1;
-            else joueur.id = 0;
+     {
+        console.log("donnee/JoueurDAO : ajouter(actionVerite)");
+        // il faut ici attribuer un id au actionVerite
+        if(listeJoueur.length > 0) joueur.id = listeJoueur[listeJoueur.length-1].id + 1;
+        else joueur.id = 0;
 
-            listeJoueur[joueur.id] = joueur;
-            localStorage['joueur'] = JSON.stringify(listeJoueur);
-            //console.log(JSON.stringify(listeActionVerite));
+        listeJoueur[joueur.id] = joueur;
+        localStorage['joueur'] = JSON.stringify(listeJoueur);
+        //console.log(JSON.stringify(listeJoueur));
 
-        }
+     }
+
+     this.modifier = function(joueur)
+     {
+        console.log("donnee/JoueurDAO : modifier(joueur)");
+
+        listeJoueur[joueur.id] = joueur;
+        localStorage['joueur'] = JSON.stringify(listeJoueur);
+        //console.log(JSON.stringify(listeJoueur));
+     }
 
     initialiser();
 }

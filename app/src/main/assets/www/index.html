@@ -98,7 +98,13 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
-					<p id="joueur-pseudo"></p>
+					<p id="joueur-score"></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<a class="btn btn-primary" role="button" id="lien-modifier-joueur">Modifier</a>
+					<a class="btn btn-primary" role="button" href="#liste-joueur">Retour</a>
 				</div>
 			</div>
 		</script>
@@ -114,6 +120,29 @@
 				<div class="col-sm-12">
 
 					<form id="formulaire-ajouter-joueur" class="form-ajouter">
+						<div class="form-group">
+							<label for="phrase">Pseudo</label>
+							<input class="form-control" type="text" name="pseudo" id="pseudo"/>
+						</div>
+						<input class="btn btn-primary" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+						<a class="btn btn-primary" role="button" href="#">Annuler et retour</a>
+					</form>
+
+				</div>
+			</div>
+		</script>
+
+		<!-- Modifier un joueur -->
+		<script type="plain/text" id="page-modifier-joueur">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1">Modifier</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+
+					<form id="formulaire-modifier-joueur" class="form-modifier">
 						<div class="form-group">
 							<label for="phrase">Pseudo</label>
 							<input class="form-control" type="text" name="pseudo" id="pseudo"/>
@@ -311,6 +340,8 @@
 	<script src="js/donnee/JoueurDAO.js"></script>
 	<script src="js/vue/joueur/ListeJoueurVue.js"></script>
 	<script src="js/vue/joueur/AjouterJoueurVue.js"></script>
+	<script src="js/vue/joueur/JoueurVue.js"></script>
+	<script src="js/vue/joueur/ModifierJoueurVue.js"></script>
 
 
 	<script src="js/vue/actionVerite/JeuVue.js"></script>
