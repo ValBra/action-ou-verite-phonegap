@@ -142,7 +142,8 @@
 			<div class="row">
 				<div class="col-sm-12">
 
-					<form id="formulaire-modifier-joueur" class="form-modifier">
+					<form id="formulaire-modifier-joueur">
+					    <input type="hidden" id="id" name="id">
 						<div class="form-group">
 							<label for="phrase">Pseudo</label>
 							<input class="form-control" type="text" name="pseudo" id="pseudo"/>
@@ -293,11 +294,6 @@
 							<label for="type">Type</label>
 								<input id="type" type="radio" name="type" value="action"> Action <br>
   								<input id="type" type="radio" name="type" value="verite"> Vérité <br>
-							<!--<select class="custom-select" id="type">-->
-								<!--<option selected>Choix...</option>-->
-								<!--<option value="Action">Action</option>-->
-								<!--<option value="Vérité">Vérité</option>-->
-							<!--</select>-->
 						</div>
 						<div class="form-group">
 							<label for="theme">Theme</label>

@@ -2,9 +2,9 @@ var ModifierJoueurVue = (function()
 {
     var pageModifierJoueur = document.getElementById("page-modifier-joueur").innerHTML;
 
-    return function(actionVeriteEnregistrerModifActionVerite)
+    return function(actionEnregistrerModifJoueur)
     {
-        this.afficher = function(actionVerite)
+        this.afficher = function(joueur)
         {
             console.log("vue/ModifierJoueurVue.js : afficher(joueur)");
             
