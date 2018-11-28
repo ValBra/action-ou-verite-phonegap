@@ -33,8 +33,20 @@ var JoueurDAO = function()
         }
 
         return listeJoueur;
-
     }
+
+    this.ajouter = function(joueur)
+        {
+            console.log("donnee/JoueurDAO : ajouter(actionVerite)");
+            // il faut ici attribuer un id au actionVerite
+            if(listeJoueur.length > 0) joueur.id = listeJoueur[listeJoueur.length-1].id + 1;
+            else joueur.id = 0;
+
+            listeJoueur[joueur.id] = joueur;
+            localStorage['joueur'] = JSON.stringify(listeJoueur);
+            //console.log(JSON.stringify(listeActionVerite));
+
+        }
 
     initialiser();
 }

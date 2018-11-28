@@ -1,7 +1,7 @@
-var Joueur = function(pseudo, score, id)
+var Joueur = function(pseudo, id)
 {
     this.id = id;
     this.pseudo = pseudo;
-    this.score = score;
+    this.score = 0;
 
 }

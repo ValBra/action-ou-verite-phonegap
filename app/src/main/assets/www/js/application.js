@@ -26,17 +26,29 @@
 			var accueilVue = new AccueilVue();
 			accueilVue.afficher();
 		}
+		else if(hash.match(/^#liste-joueur/))
+		{
+		    this.listeJoueur = this.joueurDAO.lister();
+		    var listeJoueurVue = new ListeJoueurVue(instance.listeJoueur);
+		    listeJoueurVue.afficher();
+		}
+		else if(hash.match(/^#joueur\/([0-9]+)/))
+        {
+            var navigation = hash.match(/^#joueur\/([0-9]+)/);
+            var idJoueur = navigation[1];
+            var joueurVue = new JoueurVue(instance.listeJoueur[idJoueur]);
+            joueurVue.afficher();
+        }
+		else if(hash.match(/^#ajouter-joueur/))
+        {
+            var ajouterJoueurVue = new AjouterJoueurVue(actionEnregistrerJoueur);
+            ajouterJoueurVue.afficher();
+        }
 		else if(hash.match(/^#liste-actionVerite/))
         {
             this.listeActionVerite = this.actionVeriteDAO.lister();
 			var listeActionVeriteVue = new ListeActionVeriteVue(instance.listeActionVerite);
 			listeActionVeriteVue.afficher();
-		}
-		else if(hash.match(/^#selectionJoueur/))
-		{
-		    this.listeJoueur = this.joueurDAO.lister();
-		    var listeJoueurVue = new ListeJoueurVue(instance.listeJoueur);
-		    listeJoueurVue.afficher();
 		}
 		else if(hash.match(/^#actionVerite\/([0-9]+)/))
         {
@@ -72,7 +84,17 @@
 		this.actionVeriteDAO.modifier(actionVerite);
 		naviguerAccueil();
 	}
-	
+
+	var actionEnregistrerJoueur = function(joueur){
+	    this.joueurDAO.ajouter(joueur);
+    	naviguerAccueil();
+    }
+
+    var actionEnregistrerModifJoueur = function(joueur){
+    	this.joueurDAO.modifier(joueur);
+    	naviguerAccueil();
+    }
+
 	var naviguerAccueil = function(){
 		window.location.hash = "";
 	}

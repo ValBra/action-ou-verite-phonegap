@@ -50,7 +50,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 				<form class="bouton-menu">
-					<a class="btn btn-primary action-button animate blue" role="button" href="#selectionJoueur">Jouer</a>
+					<a class="btn btn-primary action-button animate blue" role="button" href="#liste-joueur">Jouer</a>
 					<a id="btnAV" class="btn btn-primary action-button animate blue" role="button" href="#liste-actionVerite">Liste des actions verite</a>
 					</form>
 				</div>
@@ -97,6 +97,29 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<p id="joueur-pseudo"></p>
+				</div>
+			</div>
+		</script>
+
+		<!-- Ajouter un joueur -->
+		<script type="plain/text" id="page-ajouter-joueur">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1">Ajouter</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+
+					<form id="formulaire-ajouter-joueur" class="form-ajouter">
+						<div class="form-group">
+							<label for="phrase">Pseudo</label>
+							<input class="form-control" type="text" name="pseudo" id="pseudo"/>
+						</div>
+						<input class="btn btn-primary" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+						<a class="btn btn-primary" role="button" href="#">Annuler et retour</a>
+					</form>
+
 				</div>
 			</div>
 		</script>
@@ -278,11 +301,14 @@
     <!--<script type="text/javascript" charset="utf-8" src="lib/cordova.js"></script>-->
     <!--<script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script> -->
 	<script src="js/modele/ActionVerite.js"></script>
+	<script src="js/modele/Joueur.js"></script>
 	<script src="js/donnee/ActionVeriteDAO.js"></script>
 	<script src="js/vue/AccueilVue.js"></script>
 
 	<script src="js/donnee/JoueurDAO.js"></script>
 	<script src="js/vue/joueur/ListeJoueurVue.js"></script>
+	<script src="js/vue/joueur/AjouterJoueurVue.js"></script>
+
 
 	<script src="js/vue/actionVerite/JeuVue.js"></script>
 	<script src="js/vue/actionVerite/ListeActionVeriteVue.js"></script>
