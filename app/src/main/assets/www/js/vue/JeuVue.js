@@ -1,5 +1,5 @@
-var JeuVue = (function(){
-
+var JeuVue = (function()
+{
     var pageJeu = document.getElementById("page-jeu").innerHTML;
 
     classe = function()
@@ -11,7 +11,7 @@ var JeuVue = (function(){
 
             for(var numeroActionVerite in listeActionVeriteDonnee)
             {
-                var phraseRandom = Math.floor((Math.random() * listeActionVeriteDonnee.length;));
+                var phraseRandom = Math.floor((Math.random() * listeActionVeriteDonnee.length));
                 alert(phraseRandom);
             }
 
