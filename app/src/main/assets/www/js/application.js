@@ -51,6 +51,12 @@
             var modifierJoueurVue = new ModifierJoueurVue(actionEnregistrerModifJoueur);
             modifierJoueurVue.afficher(instance.listeJoueur[idJoueur]);
         }
+        else if(hash.match(/^#jouer/))
+        {
+            this.listeActionVerite = this.actionVeriteDAO.lister();
+            var jeuVue = new JeuVue(instance.listeActionVerite);
+            jeuVue.afficher();
+        }
 		else if(hash.match(/^#liste-actionVerite/))
         {
             this.listeActionVerite = this.actionVeriteDAO.lister();
