@@ -1,18 +1,35 @@
 var JeuVue = (function()
 {
+    var listeType;
     var pageJeu = document.getElementById("page-jeu").innerHTML;
 
-    classe = function()
+    return function(listeActionVeriteDonnee, type)
     {
-
-        this.afficher = function(listeActionVeriteDonnee)
+        this.afficher = function()
         {
             document.getElementsByTagName("body")[0].innerHTML = pageJeu;
 
-            for(var numeroActionVerite in listeActionVeriteDonnee)
+            var position = 0;
+            alert(type);
+
+            for(var i in listeActionVeriteDonnee)
             {
-                var phraseRandom = Math.floor((Math.random() * listeActionVeriteDonnee.length));
+                if(type == listeActionVeriteDonnee[i].type)
+                {
+                    alert(i);
+                    alert(listeActionVeriteDonnee[i]);
+                    listeType[position] = listeActionVeriteDonnee[i];
+                    position++;
+                }
+            }
+
+            if(type!= "rien")
+            {
+                var numeroRandom = Math.floor((Math.random() * listeType.length));
+
+                var phraseRandom = listeType[numeroRandom]
                 alert(phraseRandom);
+
             }
 
         }
