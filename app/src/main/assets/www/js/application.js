@@ -100,16 +100,19 @@
 
 	var actionEnregistrerJoueur = function(joueur){
 	    this.joueurDAO.ajouter(joueur);
-    	naviguerAccueil();
+    	naviguerListeJoueur();
     }
 
     var actionEnregistrerModifJoueur = function(joueur){
     	this.joueurDAO.modifier(joueur);
-    	naviguerAccueil();
+    	naviguerListeJoueur();
     }
 
 	var naviguerAccueil = function(){
 		window.location.hash = "";
+	}
+	var naviguerListeJoueur = function(){
+		window.location.hash = "#liste-joueur";
 	}
 	lancer();
 	

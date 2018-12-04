@@ -13,9 +13,11 @@ var ModifierJoueurVue = (function()
             var formulaireModifier = document.getElementById("formulaire-modifier-joueur");
 
             document.getElementById("id").value = joueur.id;
-            document.getElementById("pseudo").value = joueur.phrase;
+            document.getElementById("pseudo").value = joueur.pseudo;
 
             formulaireModifier.addEventListener("submit",enregistrerModifJoueur);
+            
+            document.getElementById("lien-retour").href = '#joueur/' + joueur.id;
         }
 
         var enregistrerModifJoueur = function(evenement)

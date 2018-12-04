@@ -1,7 +1,7 @@
 var AjouterActionVeriteVue = (function(){
     var pageAjouterActionVerite = document.getElementById("page-ajouter-actionVerite").innerHTML;
 
-    return function(actionVeriteEnregistrerActionVerite)
+    return function(actionEnregistrerActionVerite)
     {
         this.afficher = function()
         {
@@ -26,7 +26,7 @@ var AjouterActionVeriteVue = (function(){
             
             var actionVerite = new ActionVerite(phrase, type, theme, difficulte, createur, null);
 
-            actionVeriteEnregistrerActionVerite(actionVerite);
+            actionEnregistrerActionVerite(actionVerite);
         }
     };
 })();
