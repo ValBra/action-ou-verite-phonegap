@@ -64,6 +64,15 @@ var ActionVeriteDAO = function()
         localStorage['actionVerite'] = JSON.stringify(listeActionVerite);
         //console.log(JSON.stringify(listeActionVerite));
     }
+	
+	this.recuperer = function(actionVerite){
+		var phrase=listeActionVerite[position].phrase;
+        var type=listeActionVerite[position].type;
+        var theme=listeActionVerite[position].theme;
+        var difficulte=listeActionVerite[position].difficulte;
+        var createur=listeActionVerite[position].createur;
+        var id=listeActionVerite[position].id;
+	}
     
     initialiser();
 }
