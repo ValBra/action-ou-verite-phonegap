@@ -26,68 +26,68 @@
 			var accueilVue = new AccueilVue();
 			accueilVue.afficher();
 		}
-		else if(hash.match(/^#liste-joueur/))
+		else if(hash.match(/^#liste-joueur$/))
 		{
 		    this.listeJoueur = this.joueurDAO.lister();
 		    var listeJoueurVue = new ListeJoueurVue(instance.listeJoueur);
 		    listeJoueurVue.afficher();
 		}
-		else if(hash.match(/^#joueur\/([0-9]+)/))
+		else if(hash.match(/^#joueur\/([0-9]+)$/))
         {
-            var navigation = hash.match(/^#joueur\/([0-9]+)/);
+            var navigation = hash.match(/^#joueur\/([0-9]+)$/);
             var idJoueur = navigation[1];
             var joueurVue = new JoueurVue(instance.listeJoueur[idJoueur]);
             joueurVue.afficher();
         }
-		else if(hash.match(/^#ajouter-joueur/))
+		else if(hash.match(/^#ajouter-joueur$/))
         {
             var ajouterJoueurVue = new AjouterJoueurVue(actionEnregistrerJoueur);
             ajouterJoueurVue.afficher();
         }
-        else if(hash.match(/^#modifier-joueur\/([0-9]+)/))
+        else if(hash.match(/^#modifier-joueur\/([0-9]+)$/))
         {
             var navigation = hash.match(/^#modifier-joueur\/([0-9]+)/);
             var idJoueur = navigation[1];
             var modifierJoueurVue = new ModifierJoueurVue(actionEnregistrerModifJoueur);
             modifierJoueurVue.afficher(instance.listeJoueur[idJoueur]);
         }
-        else if(hash.match(/^#jouer/))
+        else if(hash.match(/^#jouer$/))
         {
             this.listeActionVerite = this.actionVeriteDAO.lister();
             var jeuVue = new JeuVue(instance.listeActionVerite, "rien");
             jeuVue.afficher();
         }
-        else if(hash.match(/^#action/))
+        else if(hash.match(/^#action$/))
         {
             this.listeActionVerite = this.actionVeriteDAO.lister();
             var jeuVue = new JeuVue(instance.listeActionVerite, "Action");
             jeuVue.afficher();
         }
-        else if(hash.match(/^#verite/))
+        else if(hash.match(/^#verite$/))
         {
             this.listeActionVerite = this.actionVeriteDAO.lister();
             var jeuVue = new JeuVue(instance.listeActionVerite, "Vérité");
             jeuVue.afficher();
         }
-		else if(hash.match(/^#liste-actionVerite/))
+		else if(hash.match(/^#liste-actionVerite$/))
         {
             this.listeActionVerite = this.actionVeriteDAO.lister();
 			var listeActionVeriteVue = new ListeActionVeriteVue(instance.listeActionVerite);
 			listeActionVeriteVue.afficher();
 		}
-		else if(hash.match(/^#actionVerite\/([0-9]+)/))
+		else if(hash.match(/^#actionVerite\/([0-9]+)$/))
         {
             var navigation = hash.match(/^#actionVerite\/([0-9]+)/);
             var idActionVerite = navigation[1];
             var actionVeriteVue = new ActionVeriteVue(instance.listeActionVerite[idActionVerite]);
             actionVeriteVue.afficher();
         }
-		else if(hash.match(/^#ajouter-actionVerite/))
+		else if(hash.match(/^#ajouter-actionVerite$/))
         {
             var ajouterActionVeriteVue = new AjouterActionVeriteVue(actionEnregistrerActionVerite);
             ajouterActionVeriteVue.afficher();
 		}
-		else if(hash.match(/^#modifier-actionVerite\/([0-9]+)/))
+		else if(hash.match(/^#modifier-actionVerite\/([0-9]+)$/))
         {
             var navigation = hash.match(/^#modifier-actionVerite\/([0-9]+)/);
             var idActionVerite = navigation[1];
