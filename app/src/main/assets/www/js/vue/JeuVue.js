@@ -3,13 +3,14 @@ var JeuVue = (function()
     var listeType = [];
     var pageJeu = document.getElementById("page-jeu").innerHTML;
 
-    return function(listeActionVeriteDonnee, type)
+    return function(listeActionVeriteDonnee, listeJoueurDonnee, type)
     {
         this.afficher = function()
         {
             document.getElementsByTagName("body")[0].innerHTML = pageJeu;
 
             var phraseActionVerite = document.getElementById("phrase");
+            var joueur = document.getElementById("nomJoueur");
 
             var position = 0;
             listeType = [];
@@ -27,10 +28,14 @@ var JeuVue = (function()
 
             if(type != "rien")
             {
-                var numeroRandom = Math.floor((Math.random() * listeType.length));
-                var phraseRandom = listeType[numeroRandom];
+                var numeroPhrase = Math.floor((Math.random() * listeType.length));
+                var phraseRandom = listeType[numeroPhrase];
+
+                var numeroJoueur = Math.floor((Math.random() * listeJoueurDonnee.length));
+                var joueurRandom = listeJoueurDonnee[numeroJoueur].pseudo;
 
                 phraseActionVerite.innerHTML = phraseRandom;
+                joueur.innerHTML = joueurRandom;
             }
 
         }
