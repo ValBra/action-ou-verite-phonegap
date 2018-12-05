@@ -47,7 +47,7 @@ var ActionVeriteDAO = function()
     {
         console.log("donnee/ActionVeriteDAO : ajouter(actionVerite)");
         // il faut ici attribuer un id au actionVerite
-        if(listeActionVerite.length > 0) actionVerite.id = listeActionVerite[listeActionVerite.length-1].id + 1;
+        if(listeActionVerite.length > 0) actionVerite.id = listeActionVerite.length;
         else actionVerite.id = 0;
 
         listeActionVerite[actionVerite.id] = actionVerite;
