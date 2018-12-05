@@ -102,12 +102,12 @@
 	
 	var actionEnregistrerActionVerite = function(actionVerite){
 		this.actionVeriteDAO.ajouter(actionVerite);
-		naviguerAccueil();
+		naviguerListeActionVerite();
 	}
 	
 	var actionEnregistrerModifActionVerite = function(actionVerite){
 		this.actionVeriteDAO.modifier(actionVerite);
-		naviguerAccueil();
+		naviguerListeActionVerite();
 	}
 
 	var actionEnregistrerJoueur = function(joueur){
@@ -122,6 +122,9 @@
 
 	var naviguerAccueil = function(){
 		window.location.hash = "";
+    }
+    var naviguerListeActionVerite = function(){
+		window.location.hash = "#liste-actionVerite";
 	}
 	var naviguerListeJoueur = function(){
 		window.location.hash = "#liste-joueur";
