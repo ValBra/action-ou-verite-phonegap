@@ -25,7 +25,6 @@ var JoueurDAO = function()
             {
                 var joueur = new Joueur(
                     listeJoueur[position].pseudo,
-                    listeJoueur[position].score,
                     listeJoueur[position].id
                 );
                 listeJoueur[position] = joueur;
