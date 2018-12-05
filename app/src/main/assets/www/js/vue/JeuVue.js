@@ -1,6 +1,6 @@
 var JeuVue = (function()
 {
-    var listeType;
+    var listeType = [];
     var pageJeu = document.getElementById("page-jeu").innerHTML;
 
     return function(listeActionVeriteDonnee, type)
@@ -9,27 +9,28 @@ var JeuVue = (function()
         {
             document.getElementsByTagName("body")[0].innerHTML = pageJeu;
 
+            var phraseActionVerite = document.getElementById("phrase");
+
             var position = 0;
-            alert(type);
+            listeType = [];
+
 
             for(var i in listeActionVeriteDonnee)
             {
                 if(type == listeActionVeriteDonnee[i].type)
                 {
-                    alert(i);
-                    alert(listeActionVeriteDonnee[i]);
-                    listeType[position] = listeActionVeriteDonnee[i];
+                    listeType[position] = [];
+                    listeType[position] = listeActionVeriteDonnee[i].phrase;
                     position++;
                 }
             }
 
-            if(type!= "rien")
+            if(type != "rien")
             {
                 var numeroRandom = Math.floor((Math.random() * listeType.length));
+                var phraseRandom = listeType[numeroRandom];
 
-                var phraseRandom = listeType[numeroRandom]
-                alert(phraseRandom);
-
+                phraseActionVerite.innerHTML = phraseRandom;
             }
 
         }
