@@ -58,19 +58,26 @@
             var jeuVue = new JeuVue(instance.listeActionVerite, instance.listeJoueur, "rien");
             jeuVue.afficher();
         }
+		else if(hash.match(/^#action2$/)){
+			
+		}
         else if(hash.match(/^#action$/))
         {
 		    this.listeJoueur = this.joueurDAO.lister();
             this.listeActionVerite = this.actionVeriteDAO.lister();
             var jeuVue = new JeuVue(instance.listeActionVerite, instance.listeJoueur, "Action");
             jeuVue.afficher();
-        }
+			window.location.hash = "#action2";
+        }else if(hash.match(/^#verite2$/)){
+			
+		}
         else if(hash.match(/^#verite$/))
         {
 		    this.listeJoueur = this.joueurDAO.lister();
             this.listeActionVerite = this.actionVeriteDAO.lister();
             var jeuVue = new JeuVue(instance.listeActionVerite, instance.listeJoueur, "Vérité");
             jeuVue.afficher();
+			window.location.hash = "#verite2";
         }
 		else if(hash.match(/^#liste-actionVerite$/))
         {
