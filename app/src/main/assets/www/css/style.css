@@ -76,8 +76,9 @@ a {
 
 .canvas-interactive-wrapper {
     position: relative;
-    height: 700px;
+    height: 950px;
     text-align: center;
+    top: -135px;
 }
 
 .canvas-interactive-wrapper canvas {
