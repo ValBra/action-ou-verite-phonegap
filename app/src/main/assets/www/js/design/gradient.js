@@ -1,14 +1,18 @@
 var granimInstance = new Granim({
-    element: '#canvas-basic',
-    direction: 'top-bottom',
+    element: '#canvas-body',
+    name: 'interactive-gradient',
+    elToSetClassOn: '.canvas-interactive-wrapper',
+    direction: 'diagonal',
     isPausedWhenNotInView: true,
+    stateTransitionSpeed: 500,
     states : {
         "default-state": {
             gradients: [
-                ['#ff9966', '#ff5e62'],
-                ['#00F260', '#0575E6'],
-                ['#e1eec3', '#f05053']
-            ]
+                ['#B3FFAB', '#12FFF7'],
+                ['#ADD100', '#7B920A'],
+                ['#1A2980', '#26D0CE']
+            ],
+            transitionSpeed: 10000
         }
     }
 });

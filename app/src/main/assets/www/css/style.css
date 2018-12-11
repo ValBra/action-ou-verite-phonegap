@@ -13,7 +13,7 @@ a {
   text-align: center;
 }
 
-#canvas-basic {
+#canvas-body {
     position: absolute;
     display: block;
     width: 100%;
@@ -73,6 +73,44 @@ a {
 .list-group {
   width: 65%;
 }
+
+.canvas-interactive-wrapper {
+    position: relative;
+    height: 700px;
+    text-align: center;
+}
+
+.canvas-interactive-wrapper canvas {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.canvas-interactive-wrapper .cta-wrapper {
+    margin-top: 130px;
+}
+
+.canvas-interactive-wrapper .cta-wrapper h1, a {
+    position: relative;
+    display: inline-block;
+    padding: 3px 7px;
+    border: solid 1px transparent;
+    margin-right: 50px;
+    z-index: 10;
+    text-decoration: none;
+    color: #222;
+    transition: border .3s;
+}
+
+.canvas-interactive-wrapper .cta-wrapper a.active {
+    border-color: #222;
+}
+
 
 /*a.Action {
   background-color : red;

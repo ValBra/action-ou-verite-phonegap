@@ -14,19 +14,13 @@
 	<link rel="stylesheet" href="css/animate.css">
 
 	<link rel="stylesheet" href='css/style.css'>
-
-	<script src="lib/granim.js"></script>
+	<script src="lib/granim.min.js"></script>
 	<script src="lib/anime.min.js"></script>
-
 
 </head>
 <body>
 
-<canvas id="canvas-basic"></canvas>
-	<div id="CSStransforms">
-		<div class="square el"></div>
-	</div>
-	<div class="container-fluid">
+
 
 		<!-- Error page -->
 		<div class="page-wrap d-flex flex-row align-items-center">
@@ -41,9 +35,12 @@
 			</div>
 		</div>
 
-
 		<!-- Page d'accueil -->
 		<script type="plain/text" id="page-accueil">
+		<div class="canvas-interactive-wrapper">
+		<canvas id="canvas-body"></canvas>
+			<div class="cta-wrapper">
+
 			<div class="row">
 				<div class="col-sm-12">
 					<h1 class="h1 animated fadeIn ">Action OU Vérité</h1>
@@ -57,18 +54,18 @@
 					</form>
 				</div>
 			</div>
+
+			</div>
+			</div>
 		</script>
+
+
 
 		<!-- Page du jeu -->
 		<script type="plain/text" id="page-jeu">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1 class="h1" id="nomJoueur"></h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<h3 class="h3" id="phrase"> </h3>
+					<h1 class="h1">Action OU Vérité </h1>
 				</div>
 			</div>
 			<div class="row">
@@ -77,11 +74,6 @@
 					<a class="btn btn-primary action-button animate blue" role="button" href="#action">Action</a>
 					<a class="btn btn-primary action-button animate blue" role="button" href="#verite">Vérité</a>
 					</form>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<a class="btn btn-primary action-button animate red" role="button" href="#">Quitter</a>
 				</div>
 			</div>
 		</script>
@@ -248,12 +240,12 @@
 					<form id="formulaire-ajouter-actionVerite" class="form-ajouter">
 						<div class="form-group">
 							<label for="phrase">Phrase</label>
-							<input class="form-control" type="textarea" name="phrase" id="phrase"/>
+							<input class="form-control" type="text" name="phrase" id="phrase"/>
 						</div>
 						<div class="form-group">
 							<label for="type">Type</label>
-							    <input id="type" type="radio" name="type" value="Action"> Action <br>
-  								<input id="type" type="radio" name="type" value="Vérité"> Vérité <br>
+							    <input id="type" type="radio" name="type" value="action"> Action <br>
+  								<input id="type" type="radio" name="type" value="verite"> Vérité <br>
 							<!--<select class="custom-select" id="type">-->
 								<!--<option selected>Choix...</option>-->
 								<!--<option value="Action">Action</option>-->
@@ -262,10 +254,10 @@
 						</div>
 						<div class="form-group">
 							<label for="theme">Theme</label>
-								<input id="theme" type="checkbox" name="theme" value="Enfants"> Enfants <br>
-  								<input id="theme" type="checkbox" name="theme" value="Ados"> Ados <br>
-								<input id="theme" type="checkbox" name="theme" value="Classique"> Classique <br>
-  								<input id="theme" type="checkbox" name="theme" value="Soirée"> Soirée <br>
+								<input id="theme" type="checkbox" name="type" value="enfants"> Enfants <br>
+  								<input id="theme" type="checkbox" name="type" value="ados"> Ados <br>
+								<input id="theme" type="checkbox" name="type" value="classique"> Classique <br>
+  								<input id="theme" type="checkbox" name="type" value="soiree"> Soirée <br>
 							<!--<select class="custom-select" id="theme">
 								<option selected>Choix...</option>
 								<option value="Enfants">Enfants</option>
@@ -289,7 +281,7 @@
 							<input class="form-control" type="text" name="createur" id="createur"/>
 						</div>
 						<input class="btn btn-primary" type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
-						<a class="btn btn-primary" role="button" href="#liste-actionVerite">Annuler et retour</a>
+						<a class="btn btn-primary" role="button" href="#">Annuler et retour</a>
 					</form>
 
 				</div>
@@ -346,22 +338,27 @@
 				</div>
 			</div>
         </script>
-	</div>
+
+
 
     <!--<script type="text/javascript" charset="utf-8" src="lib/cordova.js"></script>-->
     <!--<script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script> -->
+
+		<script src="lib/granim.min.js"></script>
+
+
 	<script src="js/modele/ActionVerite.js"></script>
 	<script src="js/modele/Joueur.js"></script>
 	<script src="js/donnee/ActionVeriteDAO.js"></script>
 	<script src="js/vue/AccueilVue.js"></script>
 
-    <script src="js/vue/JeuVue.js"></script>
+  <script src="js/vue/JeuVue.js"></script>
 
-    <script src="js/donnee/JoueurDAO.js"></script>
-    <script src="js/vue/joueur/ListeJoueurVue.js"></script>
-    <script src="js/vue/joueur/AjouterJoueurVue.js"></script>
-    <script src="js/vue/joueur/JoueurVue.js"></script>
-    <script src="js/vue/joueur/ModifierJoueurVue.js"></script>
+  <script src="js/donnee/JoueurDAO.js"></script>
+  <script src="js/vue/joueur/ListeJoueurVue.js"></script>
+  <script src="js/vue/joueur/AjouterJoueurVue.js"></script>
+  <script src="js/vue/joueur/JoueurVue.js"></script>
+  <script src="js/vue/joueur/ModifierJoueurVue.js"></script>
 
 	<script src="js/vue/actionVerite/ListeActionVeriteVue.js"></script>
 	<script src="js/vue/actionVerite/ActionVeriteVue.js"></script>
@@ -369,7 +366,7 @@
 	<script src="js/vue/actionVerite/ModifierActionVeriteVue.js"></script>
 
 	<script src="js/application.js"></script>
-
+	<script src="js/design/gradient.js"></script>
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
