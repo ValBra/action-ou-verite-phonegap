@@ -1,115 +1,125 @@
-h1 {
-  text-align: center;
-}
+@media screen and (min-width: 400px) {
 
-div {
-  display: block;
-  margin : auto;
-  text-align: center;
-  font-family: 'Trebuchet MS', cursive;
-}
-
-a {
-  text-align: center;
-}
-
-#canvas-body {
-    position: absolute;
+  h1 {
     display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.bouton-menu {
-	width: 50%;
-	margin: auto;
-	text-align: center;
-}
-
-.form-ajouter {
-  width: 50%;
-	margin: auto;
-	text-align: center;
-}
-
-.animate
-{
-	transition: all 0.1s;
-	-webkit-transition: all 0.1s;
-}
-
-.action-button
-{
-	position: relative;
-	padding: 8px 32px;
-  margin: auto;
-	margin-top: 5px;
-	border-radius: 10px;
-	font-family: 'Trebuchet MS', cursive;
-	font-size: 20px;
-	color: #FFF;
-	text-decoration: none;
-
-}
-
-.blue
-{
-	background-color: #3498DB;
-	border-bottom: 5px solid #2980B9;
-	text-shadow: 0px -2px #2980B9;
-}
-
-.action-button:active
-{
-	transform: translate(0px,5px);
-  -webkit-transform: translate(0px,5px);
-	border-bottom: 1px solid;
-}
-
-.list-group {
-  width: 65%;
-}
-
-.canvas-interactive-wrapper {
-    position: relative;
-    height: 950px;
     text-align: center;
-    top: -135px;
-}
+    margin-top: 8px;
+    margin-left: 50px;
+    padding: auto;
+    
+  }
 
-.canvas-interactive-wrapper canvas {
-    position: absolute;
+  div {
     display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
+    margin-left : auto;
+    text-align: center;
+    font-family: 'Trebuchet MS', cursive;
+  }
 
-.canvas-interactive-wrapper .cta-wrapper {
-    margin-top: 130px;
-}
+  a {
+    text-align: center;
 
-.canvas-interactive-wrapper .cta-wrapper h1, a {
-    position: relative;
-    display: inline-block;
-    padding: 3px 7px;
-    border: solid 1px transparent;
-    margin-right: 50px;
-    z-index: 10;
-    text-decoration: none;
-    color: #222;
-    transition: border .3s;
-}
+  }
 
-.canvas-interactive-wrapper .cta-wrapper a.active {
-    border-color: #222;
+  #canvas-body {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+  }
+
+  .bouton-menu {
+  	text-align: center;
+    width: 52.5%;
+  	margin: auto;
+  }
+
+  .form-ajouter {
+    width: 50%;
+  	margin: auto;
+  	text-align: center;
+  }
+
+  .animate
+  {
+  	transition: all 0.1s;
+  	-webkit-transition: all 0.1s;
+  }
+
+  .action-button
+  {
+  	position: relative;
+  	padding: 8px 32px;
+    margin: auto;
+  	margin-top: 5px;
+  	border-radius: 10px;
+  	font-family: 'Trebuchet MS', cursive;
+  	font-size: 20px;
+  	color: #FFF;
+  	text-decoration: none;
+
+  }
+
+  .blue
+  {
+  	background-color: #3498DB;
+  	border-bottom: 5px solid #2980B9;
+  	text-shadow: 0px -2px #2980B9;
+  }
+
+  .action-button:active
+  {
+  	transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+  	border-bottom: 1px solid;
+  }
+
+  .list-group {
+    width: 65%;
+  }
+
+  .canvas-interactive-wrapper {
+      position: relative;
+      height: 950px;
+      text-align: center;
+      top: -135px;
+  }
+
+  .canvas-interactive-wrapper canvas {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+  }
+
+  .canvas-interactive-wrapper .cta-wrapper {
+      margin-top: 130px;
+  }
+
+  .canvas-interactive-wrapper .cta-wrapper h1, a {
+      position: relative;
+      display: inline-block;
+      padding: 3px 7px;
+      border: solid 1px transparent;
+      margin-right: 50px;
+      z-index: 10;
+      text-decoration: none;
+      color: #222;
+      transition: border .3s;
+  }
+
+  .canvas-interactive-wrapper .cta-wrapper a.active {
+      border-color: #222;
+  }
+
 }
 
 
