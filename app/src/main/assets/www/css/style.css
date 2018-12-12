@@ -1,5 +1,5 @@
 @media screen and (min-width: 350px) {
-  
+
   body {
     overflow: hidden;
   }
@@ -17,7 +17,7 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    
+
     /*font-family: 'Trebuchet MS', cursive;*/
   }
 
@@ -48,16 +48,17 @@
   	margin: auto;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 200px;
   }
-  
+
   .btn {
     text-align: center;
     width: auto;
     height: auto;
   	margin: auto;
     margin-left: auto;
-    margin-right: auto; 
-    margin-top: 5px; 
+    margin-right: auto;
+    margin-top: 5px;
   }
 
   .form-ajouter {
@@ -142,6 +143,7 @@
   .canvas-interactive-wrapper .cta-wrapper a.active {
       border-color: #222;
   }
+
 
 }
 
