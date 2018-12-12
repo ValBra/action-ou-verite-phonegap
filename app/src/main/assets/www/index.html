@@ -116,7 +116,7 @@
 				</div>
 			</div>
 			<div class="col-sm-12">
-				<a class="btn btn-primary" role="button" href="#jouer">Jouer</a>
+				<a class="btn btn-primary" role="button" href="#choix-difficulte">Jouer</a>
 			</div>
 
 			</div>
@@ -408,6 +408,54 @@
 			</div>
         </script>
 
+		<script type="plain/text" id="page-difficulte">
+		<div class="canvas-interactive-wrapper">
+		<canvas id="canvas-body"></canvas>
+			<div class="cta-wrapper">
+
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="h1">Choix difficulté</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+
+					<form id="formulaire-choix-difficulte" class="form-difficulte">
+						<div class="form-group">
+							<label for="theme">Theme</label>
+								<input id="theme" type="checkbox" name="type" value="enfants"> Enfants <br>
+  								<input id="theme" type="checkbox" name="type" value="ados"> Ados <br>
+								<input id="theme" type="checkbox" name="type" value="classique"> Classique <br>
+  								<input id="theme" type="checkbox" name="type" value="soiree"> Soirée <br>
+							<!--<select class="custom-select" id="theme">
+								<option selected>Choix...</option>
+								<option value="Enfants">Enfants</option>
+								<option value="Ados">Ados</option>
+								<option value="Classique">Classique</option>
+								<option value="Soirée">Soirée</option>
+							</select>-->
+						</div>
+						<div class="form-group">
+							<label for="difficulte">Difficulte</label>
+							<select class="custom-select" id="difficulte">
+								<option selected>Choix...</option>
+								<option value="Facile">Facile</option>
+								<option value="Normal">Normal</option>
+								<option value="Difficile">Difficile</option>
+								<option value="Hard">Hard</option>
+							</select>
+						</div>
+						<a class="btn btn-primary" role="button" href="#jouer">Valider</a>
+						<a class="btn btn-primary" role="button" href="#">Annuler et retour</a>
+					</form>
+
+				</div>
+			</div>
+
+			</div>
+			</div>
+		</script>
 
 
     <!--<script type="text/javascript" charset="utf-8" src="lib/cordova.js"></script>-->
@@ -420,6 +468,7 @@
 	<script src="js/modele/Joueur.js"></script>
 	<script src="js/donnee/ActionVeriteDAO.js"></script>
 	<script src="js/vue/AccueilVue.js"></script>
+	<script src="js/vue/VueChoixDifficulte.js"></script>
 
   <script src="js/vue/JeuVue.js"></script>
 

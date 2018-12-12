@@ -103,7 +103,10 @@
             var idActionVerite = navigation[1];
             var modifierActionVeriteVue = new ModifierActionVeriteVue(actionEnregistrerModifActionVerite);
             modifierActionVeriteVue.afficher(instance.listeActionVerite[idActionVerite]);
-        }
+        }else if(hash.match(/^#choix-difficulte$/)){
+			var choixDifficulte = new VueChoixDifficulte();
+            choixDifficulte.afficher();
+		}
 		else
         {
             alert("Error : Page invalide");
