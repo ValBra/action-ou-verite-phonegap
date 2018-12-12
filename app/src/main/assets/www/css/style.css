@@ -1,4 +1,8 @@
 @media screen and (min-width: 350px) {
+  
+  body {
+    overflow: hidden;
+  }
 
   h1 {
     display: block;
@@ -103,6 +107,7 @@
   .canvas-interactive-wrapper {
       position: relative;
       height: 950px;
+      width: 100%;
       text-align: center;
       top: -135px;
   }
