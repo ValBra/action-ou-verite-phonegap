@@ -1,4 +1,4 @@
-var JeuVue = (function()
+var VueChoixDifficulte = (function()
 {
     var pageChoixDifficulte = document.getElementById("page-difficulte").innerHTML;
 
