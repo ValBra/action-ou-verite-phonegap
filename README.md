@@ -1,2 +1,6 @@
-# programmation-mobile-projet-phonegap-nomduprojet-2018-ValBra
-programmation-mobile-projet-phonegap-nomduprojet-2018-ValBra created by GitHub Classroom
+# programmation-mobile-projet-phonegap-actionOuVerite-2018-ValBra
+programmation-mobile-projet-phonegap-actionOuVerite-2018-ValBra created by GitHub Classroom
+
+Par Valère Brable - Chloé Vieille - Martin Lemée - Alexandre Catherine-Mezeray
+
+Démonstration: https://youtu.be/MUgrkxkQYuY
